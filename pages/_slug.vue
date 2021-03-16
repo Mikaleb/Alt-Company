@@ -1,6 +1,6 @@
 <template>
-  <div class="container pt-6 mx-auto">
-    <article v-if="post">
+  <div class="pt-6 mx-auto">
+    <article v-if="post" class="mx-6">
       <header class="grid grid-cols-2 gap-4 p-4 mb-12 rounded shadow-lg">
         <img v-if="post.media" :src="post.media" alt="post.title" />
         <div class="">
@@ -8,6 +8,7 @@
           <p class="text-sm text-gray-700">
             {{ $t('published-at') }} {{ getDate }}
           </p>
+          <button>Edit</button>
         </div>
       </header>
       <nuxt-content class="text-gray-800" :document="post" />
