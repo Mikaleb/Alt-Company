@@ -1,36 +1,46 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        alt-company
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+  <div class="blog container mx-auto">
+    <section class="grid grid-cols-3 gap-4 pt-12">
+      <article
+        class="post max-w-sm rounded overflow-hidden shadow-lg flex flex-col"
+        v-for="(post, $index) in posts"
+        :key="`post-${$index}`"
+      >
+        <img v-if="post.media" class="w-full" :src="post.media" :alt="post.title" />
+        <div class="px-6 py-4 flex-2">
+          <h3>{{ post.title }}</h3>
+          <p class="text-gray-700 text-base">
+            {{ post.description }}
+          </p>
+        </div>
+        <footer class="p-4">
+          <nuxt-link :to="post.path" class="font-bold text-xl mb-2">
+            <button :to="post.path" class="btn btn-teal">
+              {{ $t('read-more') }}
+            </button>
+          </nuxt-link>
+        </footer>
+      </article>
+    </section>
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
+<script>
+export default {
+  name: 'Blog',
+  async asyncData(context) {
+    const { $content, app } = context;
+    const defaultLocale = app.i18n.locale;
+    const posts = await $content(`${defaultLocale}`).fetch();
 
-export default Vue.extend({})
+    return {
+      posts: posts.map(post => ({
+    ...post,
+    path: post.path.replace(`/${defaultLocale}`, ''),
+  })),
+    }
+  },
+}
 </script>
 
 <style>

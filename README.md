@@ -1,5 +1,8 @@
 # alt-company
 
+So you want to create a company? Do you need resources ? You'd like for your company (or even your own) data to not be deleted by FAANG randomly?
+If you are a fervent free software/privacy enthusiast or if you just like to not have your google account wiped out for no reason, you're in the right place.
+
 ## Build Setup
 
 ```bash
