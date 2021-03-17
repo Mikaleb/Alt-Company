@@ -9,7 +9,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@blowstack/ckeditor-nuxt": "^0.5.2",
+    "@mikaleb/ckeditor-nuxt": "^0.6.2",
     "@nuxt/content": "^1.11.1",
     "@nuxt/typescript-runtime": "^2.0.1",
     "@nuxtjs/axios": "^5.12.5",

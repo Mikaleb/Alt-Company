@@ -859,14 +859,6 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@blowstack/ckeditor-nuxt@^0.5.2":
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/@blowstack/ckeditor-nuxt/-/ckeditor-nuxt-0.5.2.tgz#4636366578b8908ca1817fec6c708bee9020a64e"
-  integrity sha512-xmkSeBfpetzui5EmhD/OVoHNZbDfvOcAj8gS8h9PKA0VTRJ4PCYMsSt+NRddTInUpTenseuE2+u/fqTk3kOSWg==
-  dependencies:
-    "@blowstack/ckeditor5-full-free-build" "^24.0.1"
-    "@ckeditor/ckeditor5-vue2" "^1.0.5"
-
 "@blowstack/ckeditor5-full-free-build@^24.0.1":
   version "24.0.1"
   resolved "https://registry.yarnpkg.com/@blowstack/ckeditor5-full-free-build/-/ckeditor5-full-free-build-24.0.1.tgz#d90ff3cc0f624a5b10e24d6700bde2aba4da3d86"
@@ -1217,6 +1209,14 @@
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/@lokidb/loki/-/loki-2.1.0.tgz#f707e184016ce57d6dd12013938c33f9c540960e"
   integrity sha512-u2VH/4h4kZww23bak5I/oRai8VqIZCSuqiLbuSHpYXHB9Na5E9KNazh59prgUyvMzfooY7XKiHejbKVxFoAEOQ==
+
+"@mikaleb/ckeditor-nuxt@^0.6.2":
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/@mikaleb/ckeditor-nuxt/-/ckeditor-nuxt-0.6.2.tgz#a459762b70149d66dc8bf50514b9f2fed0acd0d9"
+  integrity sha512-PboWVnEPKEurCmy1wtbC1nkNvOTIrhE1k9/VopiZYuG4jKLzbqg6q5BJzsZvuu5LrYIgX1iUmgxdj1zGSfuU0g==
+  dependencies:
+    "@blowstack/ckeditor5-full-free-build" "^24.0.1"
+    "@ckeditor/ckeditor5-vue2" "^1.0.5"
 
 "@nodelib/fs.scandir@2.1.4":
   version "2.1.4"
