@@ -1,18 +1,29 @@
 <template>
   <div class="m-6">
-    <input placeholder="title" class="mb-4" />
+    <input placeholder="title" v-model="contentHeader.title" class="mb-4" />
+    <input
+      placeholder="description"
+      v-model="contentHeader.description"
+      class="mb-4"
+    />
     <client-only placeholder="loading...">
       <ckeditor-nuxt
         v-model="contentHolder"
         :config="editorConfig"
         @ready="onEditorReady"
       />
-      <p>Markdown output :</p>
-      <textarea v-html="contentMd"></textarea>
+      <div class="mt-6"><p>Markdown output :</p></div>
     </client-only>
-    <button class="btn" @click="saveContent">
-      💾 <span class="mx-1">Save</span>
-    </button>
+
+    <pre class="mt-6">
+---
+title: {{ contentHeader.title }}
+description: {{ contentHeader.description }}
+---
+
+{{ contentMd }}
+</pre
+    >
   </div>
 </template>
 
@@ -34,38 +45,23 @@ export default {
       },
       contentHolder: '',
       contentMd: '',
+      contentHeader: {
+        title: '',
+        description: '',
+      },
     }
   },
 
   watch: {
     contentHolder(val) {
       const TurndownService = require('turndown').default
-      const turndownService = new TurndownService()
-      const markdown = turndownService.turndown(val)
-      console.log(
-        '🚀 ~ file: new.vue ~ line 40 ~ contentHolder ~ markdown',
-        markdown
-      )
+      const markdown = new TurndownService().turndown(val)
       this.contentMd = markdown
-
-      console.log(val)
     },
   },
 
   methods: {
-    async saveContent() {
-      console.log(this.contentMd)
-      const { app } = context
-      const defaultLocale = app.i18n.locale
-      const url = `http://localhost:3000/_content/${defaultLocale}`
-      const content = this.contentMd
-      await fetch(url, {
-        method: 'PUT',
-        body: JSON.stringify({ file: content }),
-      }).then((res) => res.json())
-    },
     onEditorReady(editor) {
-      console.log('🚀 ~ file: new.vue ~ line 69 ~ onReady ~ editor', { editor })
       // Insert the toolbar before the editable area.
       editor.config.height = '500'
     },
