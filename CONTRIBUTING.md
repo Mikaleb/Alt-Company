@@ -27,7 +27,7 @@ you need to create it in your project folder under your language, let's say `/co
 
 ### Editing content
 
-You can double click on an article to edit the markdown directly.
+You can double click on an article to edit the markdown directly. We recommend you to use some web based solutions for now like [StackEdit](https://stackedit.io/) which is open-source too.
 _TODO : add an edit button_
 
 ## Design

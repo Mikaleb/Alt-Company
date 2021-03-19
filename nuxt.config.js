@@ -55,17 +55,17 @@ export default {
   i18n: {
     locales: [
       {
-        code: 'es',
+        code: 'esp',
         iso: 'en-ES',
         name: 'Español',
       },
       {
-        code: 'en',
+        code: 'eng',
         iso: 'en-US',
         name: 'English',
       },
       {
-        code: 'fr',
+        code: 'fra',
         iso: 'fr-fr',
         name: 'Français',
       },
@@ -75,9 +75,9 @@ export default {
     vueI18n: {
       fallbackLocale: 'en',
       messages: {
-        en: require('./locales/en-us.json'),
-        es: require('./locales/es-es.json'),
-        fr: require('./locales/fr-fr.json'),
+        eng: require('./locales/en-us.json'),
+        esp: require('./locales/es-es.json'),
+        fra: require('./locales/fr-fr.json'),
       },
     },
   },

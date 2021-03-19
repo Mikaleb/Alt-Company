@@ -19,8 +19,14 @@
           </p>
         </div>
         <footer class="p-4">
-          <nuxt-link :to="post.path" class="mb-2 text-xl font-bold">
-            <button :to="post.path" class="btn btn-teal">
+          <nuxt-link
+            :to="{
+              name: 'slug___' + $i18n.locale,
+              params: { slug: post.slug },
+            }"
+            class="mb-2 text-xl font-bold"
+          >
+            <button :to="$i18n.locale + post.path" class="btn btn-teal">
               {{ $t('read-more') }}
             </button>
           </nuxt-link>
@@ -33,9 +39,13 @@
 <script>
 export default {
   name: 'Blog',
-  async asyncData(context) {
-    const { $content, app } = context
+  async asyncData(ctx) {
+    const { $content, app } = ctx
     const defaultLocale = app.i18n.locale
+    console.log(
+      '🚀 ~ file: index.vue ~ line 42 ~ asyncData ~ defaultLocale',
+      defaultLocale
+    )
     const posts = await $content(`${defaultLocale}`).fetch()
 
     return {

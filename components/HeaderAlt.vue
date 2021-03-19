@@ -12,23 +12,24 @@
           </a>
         </div>
         <div class="self-end left">
-          <ul class="flex justify-around lang-switch" v-if="!isContentPage">
-            <li v-if="$i18n.locale !== 'en'">
-              <nuxt-link class="text-md" :to="switchLocalePath('en')"
-                >🇬🇧 EN</nuxt-link
-              >
-            </li>
-            <li v-if="$i18n.locale !== 'es'">
-              <nuxt-link class="text-md" :to="switchLocalePath('es')"
-                >🇪🇸 ES</nuxt-link
-              >
-            </li>
-            <li v-if="$i18n.locale !== 'fr'">
-              <nuxt-link class="text-md" :to="switchLocalePath('fr')"
-                >🇫🇷 FR</nuxt-link
-              >
-            </li>
-          </ul>
+          <dropdown v-if="!isContentPage">
+            <slot>
+              <ul>
+                <template v-for="locale in locales">
+                  <li
+                    :key="locale.code"
+                    v-if="$i18n.locale !== locale.code.toLowerCase()"
+                  >
+                    <nuxt-link
+                      class="text-md"
+                      :to="switchLocalePath(locale.code.toLowerCase())"
+                      >{{ locale.flag }} {{ locale.code }}</nuxt-link
+                    >
+                  </li>
+                </template>
+              </ul>
+            </slot>
+          </dropdown>
         </div>
       </div>
     </div>
@@ -36,12 +37,35 @@
 </template>
 
 <script>
+import Dropdown from '@/components/Dropdown.vue'
 export default {
   name: 'HeaderAlt',
+  components: {
+    Dropdown,
+  },
   computed: {
     isContentPage() {
-      return this.$route.name.includes('slug')
+      return this.$route.params?.slug ? true : false
     },
+  },
+
+  data() {
+    return {
+      locales: [
+        {
+          flag: '🇫🇷',
+          code: 'FRA',
+        },
+        {
+          flag: '🇬🇧',
+          code: 'ENG',
+        },
+        {
+          flag: '🇪🇸',
+          code: 'ESP',
+        },
+      ],
+    }
   },
 }
 </script>
