@@ -3,8 +3,9 @@
     <!-- Dropdown toggle button -->
     <button
       @click="dropdownOpen = !dropdownOpen"
-      class="relative z-10 block p-2 bg-white rounded-md dark:bg-gray-800 focus:outline-none"
+      class="relative z-10 items-center justify-center inline-block bg-white rounded-md dark:bg-gray-800"
     >
+    <slot name="dropdownBtn"></slot>
       <svg
         class="w-5 h-5 text-gray-800 dark:text-white"
         xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +33,7 @@
         v-show="dropdownOpen"
         class="absolute right-0 z-20 w-48 p-2 mt-2 bg-white rounded-md shadow-xl dark:bg-gray-800"
       >
-        <slot></slot>
+        <slot name="content"></slot>
       </div>
     </transition>
   </div>

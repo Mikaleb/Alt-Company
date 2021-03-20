@@ -13,22 +13,23 @@
         </div>
         <div class="self-end left">
           <dropdown v-if="!isContentPage">
-            <slot>
+            <template v-slot:dropdownBtn><span class="dark:text-white">🌐 {{$i18n.locale}}</span></template>
+            <template v-slot:content>
               <ul>
-                <template v-for="locale in locales">
+                <template v-for="(locale, index) in $i18n.locales">
                   <li
-                    :key="locale.code"
-                    v-if="$i18n.locale !== locale.code.toLowerCase()"
+                    :key="index"
+                    v-if="$i18n.locale !== locale.code"
                   >
                     <nuxt-link
-                      class="text-md"
-                      :to="switchLocalePath(locale.code.toLowerCase())"
-                      >{{ locale.flag }} {{ locale.code }}</nuxt-link
+                      class="capitalize text-md dark:text-white"
+                      :to="switchLocalePath(locale.code)"
+                      >{{ locale.code }}</nuxt-link
                     >
                   </li>
                 </template>
               </ul>
-            </slot>
+            </template>
           </dropdown>
         </div>
       </div>
@@ -47,25 +48,6 @@ export default {
     isContentPage() {
       return this.$route.params?.slug ? true : false
     },
-  },
-
-  data() {
-    return {
-      locales: [
-        {
-          flag: '🇫🇷',
-          code: 'FRA',
-        },
-        {
-          flag: '🇬🇧',
-          code: 'ENG',
-        },
-        {
-          flag: '🇪🇸',
-          code: 'ESP',
-        },
-      ],
-    }
   },
 }
 </script>
