@@ -7,9 +7,9 @@
     >
       <div class="flex items-center justify-between">
         <div class="flex items-center justify-start right">
-          <a href="/">
+          <nuxt-link to="/">
             <Logo class="w-48 mr-3" />
-          </a>
+          </nuxt-link>
         </div>
         <div class="self-end left">
           <dropdown v-if="!isContentPage">
