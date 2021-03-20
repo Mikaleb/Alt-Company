@@ -22,6 +22,7 @@ export default {
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
+
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/typescript
@@ -70,10 +71,10 @@ export default {
         name: 'Français',
       },
     ],
-    defaultLocale: 'en',
+    defaultLocale: 'eng',
     noPrefixDefaultLocale: true,
     vueI18n: {
-      fallbackLocale: 'en',
+      fallbackLocale: 'eng',
       messages: {
         eng: require('./locales/en-us.json'),
         esp: require('./locales/es-es.json'),

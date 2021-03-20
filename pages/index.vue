@@ -42,10 +42,6 @@ export default {
   async asyncData(ctx) {
     const { $content, app } = ctx
     const defaultLocale = app.i18n.locale
-    console.log(
-      '🚀 ~ file: index.vue ~ line 42 ~ asyncData ~ defaultLocale',
-      defaultLocale
-    )
     const posts = await $content(`${defaultLocale}`).fetch()
 
     return {
