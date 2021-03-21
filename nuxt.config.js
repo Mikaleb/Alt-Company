@@ -2,8 +2,8 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
   router: {
-    base: '/Alt-Company/',
-    trailingSlash: true,
+    base: process.env.NODE_ENV === 'production' ? '/Alt-Company/' : '/',
+    trailingSlash: false,
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -86,7 +86,8 @@ export default {
       },
     ],
     defaultLocale: 'eng',
-    noPrefixDefaultLocale: true,
+    noPrefixDefaultLocale: false,
+    strategy: 'prefix',
     vueI18n: {
       fallbackLocale: 'eng',
       messages: {

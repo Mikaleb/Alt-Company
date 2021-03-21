@@ -34,6 +34,10 @@ _TODO : add an edit button_
 
 If you want to setup a new design for yourself or [help with this repo design,](https://github.com/Mikaleb/Alt-Company/compare) feel free to do so !
 
+## Bugs
+
+- For time visitors not in english can encounter a bug that corrects itself uppon reload : waiting correction with [this ticket](https://github.com/nuxt-community/i18n-module/issues/1060).
+
 ## Build Setup
 
 ```bash
