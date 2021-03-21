@@ -2,7 +2,8 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
   router: {
-    base: '/Alt-Company/'
+    base: '/Alt-Company/',
+    trailingSlash: true,
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -62,6 +63,11 @@ export default {
   },
 
   i18n: {
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      onlyOnRoot: true,  // recommended
+    },
     locales: [
       {
         code: 'esp',
@@ -80,7 +86,7 @@ export default {
       },
     ],
     defaultLocale: 'eng',
-    noPrefixDefaultLocale: false,
+    noPrefixDefaultLocale: true,
     vueI18n: {
       fallbackLocale: 'eng',
       messages: {
