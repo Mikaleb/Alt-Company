@@ -54,7 +54,7 @@ export default {
   async asyncData({ $content, app, params, error }) {
     const slug = params.slug || 'index'
     const defaultLocale = app.i18n.locale
-    const post = await $content(defaultLocale + '/' + slug)
+    const post = await $content(defaultLocale, slug)
       .fetch()
       .catch((err) => {
         error({ statusCode: 404, message: 'Post not found' })

@@ -80,7 +80,7 @@ export default {
       },
     ],
     defaultLocale: 'eng',
-    noPrefixDefaultLocale: true,
+    noPrefixDefaultLocale: false,
     vueI18n: {
       fallbackLocale: 'eng',
       messages: {

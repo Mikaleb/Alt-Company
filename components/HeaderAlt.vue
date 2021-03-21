@@ -13,14 +13,15 @@
         </div>
         <div class="self-end left">
           <dropdown v-if="!isContentPage">
-            <template v-slot:dropdownBtn><span class="dark:text-white">🌐 {{$i18n.locale}}</span></template>
+            <template v-slot:dropdownBtn
+              ><span class="text-black dark:text-white"
+                >🌐 {{ $i18n.locale }}</span
+              ></template
+            >
             <template v-slot:content>
               <ul>
                 <template v-for="(locale, index) in $i18n.locales">
-                  <li
-                    :key="index"
-                    v-if="$i18n.locale !== locale.code"
-                  >
+                  <li :key="index" v-if="$i18n.locale !== locale.code">
                     <nuxt-link
                       class="capitalize text-md dark:text-white"
                       :to="switchLocalePath(locale.code)"
