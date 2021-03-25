@@ -1,5 +1,8 @@
 module.exports = {
   purge: [],
+  prefix: '',
+  important: false,
+  separator: ':',
   darkMode: 'class',
   variants: {
     backgroundColor: [
