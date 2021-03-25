@@ -2007,10 +2007,10 @@
   resolved "https://registry.yarnpkg.com/@polka/url/-/url-1.0.0-next.11.tgz#aeb16f50649a91af79dbe36574b66d0f9e4d9f71"
   integrity sha512-3NsZsJIA/22P3QUyrEDNA2D133H4j224twJrdipXN38dpnIOzAbUDtOwkcJ5pXmn75w7LSQDjA4tO9dm1XlqlA==
 
-"@tailwindcss/jit@^0.1.1":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/jit/-/jit-0.1.4.tgz#c373b89908143a5b5241fc9a905d58e3435b057d"
-  integrity sha512-4IGNNBR00dvZ79iQiXNwNWj5UX9lzXW6UWg6eg42rbSox/UlO7sLwyl0tBuaHa32zWAguHfmF1Yptn1y6iF4AQ==
+"@tailwindcss/jit@^0.1.1", "@tailwindcss/jit@^0.1.7":
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/jit/-/jit-0.1.7.tgz#9916a53e13937346912285faaea05d151d12f1e2"
+  integrity sha512-v2TtFXvecPQ105ko2aaXp26VMtaBudpwB0039rxYy/yg6c34IX91HAmOEuotUwcwNvSW6I97YtzNg9ps3blr0A==
   dependencies:
     chokidar "^3.5.1"
     dlv "^1.1.3"
