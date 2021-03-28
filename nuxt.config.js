@@ -10,12 +10,24 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'alt-company',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+    meta: [{
+        charset: 'utf-8'
+      },
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1'
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content: ''
+      },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{
+      rel: 'icon',
+      type: 'image/x-icon',
+      href: '/favicon.ico'
+    }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -55,7 +67,8 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     'nuxt-i18n',
-    'nuxt-purgecss'
+    'nuxt-purgecss',
+    "@nuxtjs/svg"
   ],
 
   tailwindcss: {
@@ -72,10 +85,9 @@ export default {
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'i18n_redirected',
-      onlyOnRoot: true,  // recommended
+      onlyOnRoot: true, // recommended
     },
-    locales: [
-      {
+    locales: [{
         code: 'esp',
         iso: 'en-ES',
         name: 'Español',
@@ -120,5 +132,5 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     extractCSS: true,
-      },
+  },
 }

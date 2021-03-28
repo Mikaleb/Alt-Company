@@ -1,17 +1,17 @@
 <template>
   <div>
-    <HeaderAlt />
+    <HeaderContent />
     <Nuxt />
   </div>
 </template>
 
 <script>
-import HeaderAlt from '@/components/HeaderAlt'
+import HeaderContent from '@/components/Header/Content'
 
 export default {
   name:'default',
   components: {
-    HeaderAlt
+    HeaderContent
   }
 }
 </script>

@@ -32,6 +32,7 @@
               </ul>
             </template>
           </dropdown>
+          <theme-switcher></theme-switcher>
         </div>
       </div>
     </div>
@@ -40,10 +41,13 @@
 
 <script>
 import Dropdown from '@/components/Dropdown.vue'
+import ThemeSwitcher from '@/components/Header/ThemeSwitcher.vue'
+
 export default {
   name: 'HeaderAlt',
   components: {
     Dropdown,
+    ThemeSwitcher
   },
   computed: {
     isContentPage() {
