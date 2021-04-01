@@ -16,7 +16,7 @@
     "@nuxtjs/color-mode": "^2.0.5",
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/svg": "^0.1.12",
-    "core-js": "^3.8.3",
+    "core-js": "^3.10.0",
     "date-fns": "^2.19.0",
     "nuxt": "^2.15.3",
     "nuxt-i18n": "^6.22.1",
