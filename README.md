@@ -4,6 +4,7 @@
   
 <p  align="center">
 <a  href="https://github.com/Mikaleb/Alt-Company/issues"><img  alt="GitHub issues"  src="https://img.shields.io/github/issues/Mikaleb/Alt-Company"></a>
+<img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/Mikaleb/Alt-Company">
 <a  href="https://github.com/Mikaleb/Alt-Company/network"><img  alt="GitHub forks"  src="https://img.shields.io/github/forks/Mikaleb/Alt-Company"></a>
 <a  href="https://github.com/Mikaleb/Alt-Company/stargazers"><img  alt="GitHub stars"  src="https://img.shields.io/github/stars/Mikaleb/Alt-Company"></a>
 <a  href="https://github.com/Mikaleb/Alt-Company"><img  alt="GitHub license"  src="https://img.shields.io/github/license/Mikaleb/Alt-Company"></a>

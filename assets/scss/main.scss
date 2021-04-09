@@ -19,13 +19,13 @@ h3,
 h4,
 h5,
 h6 {
+  @apply mb-4 text-gray-800 dark:text-gray-300 font-normal;
   font-size: 100%;
   font-weight: 400;
-  @apply mb-4 text-gray-800 dark:text-gray-300;
 }
 
 h1 {
-  @apply text-4xl;
+  @apply text-4xl font-extrabold mt-0;
 }
 
 h2 {

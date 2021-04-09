@@ -1,14 +1,14 @@
 <template>
   <div class="pt-6 mx-auto">
     <article v-if="post" class="mx-6 card">
-      <header class="grid grid-cols-2 gap-4 p-4 mb-12 rounded shadow-lg">
+      <header class="p-4 mb-6 rounded">
         <img v-if="post.media" :src="post.media" alt="post.title" />
         <div class="">
-          <h2 class="mb-2 text-lg font-bold text-gray-800">{{ post.title }}</h2>
+          <h1 class="">{{ post.title }}</h1>
           <p class="text-sm text-gray-700">
             {{ $t('published-at') }} {{ getDate }}
           </p>
-          <button>Edit</button>
+          <!-- <button>Edit</button> -->
         </div>
       </header>
       <nuxt-content class="text-gray-800" :document="post" />

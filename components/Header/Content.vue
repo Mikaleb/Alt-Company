@@ -20,7 +20,7 @@
             >
             <template v-slot:content>
               <ul>
-                <template v-for="(locale, index) in $i18n.locales">
+                <template v-for="(locale, index) in availableLocales">
                   <li :key="index" v-if="$i18n.locale !== locale.code">
                     <nuxt-link
                       class="capitalize text-md dark:text-white"
@@ -53,6 +53,9 @@ export default {
     isContentPage() {
       return this.$route.params?.slug ? true : false
     },
+    availableLocales () {
+    return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale)
+    }
   },
 }
 </script>

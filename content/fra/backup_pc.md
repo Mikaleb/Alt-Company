@@ -1,6 +1,6 @@
 ---
-title: Sauvegarder vos PC
-description: Quand vous voulez être sur de pas perdre vos disques dur
+title: Backup de vos PC
+description: Faire des copies et des redondances de vos PC
 ---
 
 La règle principale lors de la sauvegarde de données, outre le fait de bien penser à sauvegarder votre travail à intervalle régulier, c'est celle du 3-2-1 comme le rappelle [cet article de Veeam.](https://www.veeam.com/blog/fr/how-to-follow-the-3-2-1-backup-rule-with-veeam-backup-replication.html)
