@@ -13,20 +13,21 @@
         </div>
         <div class="self-end left">
           <dropdown v-if="!isContentPage">
-            <template v-slot:dropdownBtn
-              ><span class="text-black dark:text-white"
-                >🌐 {{ $i18n.locale }}</span
-              ></template
-            >
-            <template v-slot:content>
+            <template v-slot:dropdownBtn>
+              <span class="text-black dark:text-white">
+                🌐 {{ $i18n.locale }}
+              </span>
+            </template>
+            <template v-slot:content v-if="availableLocales">
               <ul>
                 <template v-for="(locale, index) in availableLocales">
                   <li :key="index" v-if="$i18n.locale !== locale.code">
                     <nuxt-link
                       class="capitalize text-md dark:text-white"
                       :to="switchLocalePath(locale.code)"
-                      >{{ locale.code }}</nuxt-link
                     >
+                      {{ locale.code }}
+                    </nuxt-link>
                   </li>
                 </template>
               </ul>
@@ -47,15 +48,15 @@ export default {
   name: 'HeaderAlt',
   components: {
     Dropdown,
-    ThemeSwitcher
+    ThemeSwitcher,
   },
   computed: {
     isContentPage() {
       return this.$route.params?.slug ? true : false
     },
-    availableLocales () {
-    return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale)
-    }
+    availableLocales() {
+      return this.$i18n.locales.filter((i) => i.code !== this.$i18n.locale)
+    },
   },
 }
 </script>

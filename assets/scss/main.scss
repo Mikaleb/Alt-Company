@@ -48,6 +48,10 @@ a {
   }
 }
 
+.title {
+  @apply font-bold text-lg leading-snug text-center;
+}
+
 @media (min-width: 1024px) {
   p {
     max-width: fit-content !important;

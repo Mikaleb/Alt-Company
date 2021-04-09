@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen">
+  <div class="min-h-screen dark:bg-gray-800">
     <HeaderContent />
     <Nuxt />
   </div>
@@ -9,9 +9,9 @@
 import HeaderContent from '@/components/Header/Content'
 
 export default {
-  name:'default',
+  name: 'default',
   components: {
-    HeaderContent
-  }
+    HeaderContent,
+  },
 }
 </script>

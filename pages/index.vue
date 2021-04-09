@@ -13,24 +13,18 @@
           :alt="post.title"
         />
         <div class="px-6 py-4 flex-2">
-          <h3>{{ post.title }}</h3>
-          <p class="text-base text-gray-700">
-            {{ post.description }}
-          </p>
-        </div>
-        <footer class="p-4">
           <nuxt-link
+            class="title"
             :to="{
               name: 'slug___' + $i18n.locale,
               params: { slug: post.slug },
             }"
-            class="mb-2 text-xl font-bold"
+            >{{ post.title }}</nuxt-link
           >
-            <button :to="$i18n.locale + post.path" class="btn btn-teal">
-              {{ $t('read-more') }}
-            </button>
-          </nuxt-link>
-        </footer>
+          <p class="text-base text-gray-700">
+            {{ post.description }}
+          </p>
+        </div>
       </article>
     </section>
   </div>
@@ -53,4 +47,3 @@ export default {
   },
 }
 </script>
-
