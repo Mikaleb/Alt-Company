@@ -13,6 +13,7 @@
 
 > A curated resources collection you'd like for your company data (heck even your own datas) to not be deleted by a third-party / FAANG randomly
 
+Kudo for https://github.com/awesome-selfhosted/awesome-selfhosted nice ressources too
 # Alt-Company
 
 The content goal is to actively show the alternatives of proprietary solutions that can get you out of their systems when they want. It's not exhaustive, and you might see that these solutions here as they are widely used and trustworthy in their industries.
@@ -20,7 +21,6 @@ The content goal is to actively show the alternatives of proprietary solutions t
 ## Backup data
 
 - [BackBlaze](https://secure.backblaze.com/buy.htm) ($6 / mois - $60 / an)
-
 
 ## CRM
 
@@ -37,3 +37,22 @@ You have to be able to pay your employee (s) but it will be just as wise to avoi
 - [https://www.openconcerto.org/fr/index.html](https://www.openconcerto.org/fr/index.html) Open Concerto, a good solution that has been scattered a bit like CRM but which remains a good reference in terms of payroll management.
 - [https://framalibre.org/content/odoo-community-edition](https://framalibre.org/content/odoo-community-edition) Odoo, via the OpenPAIES extension which is a treat to use.
 
+## Project Management
+
+- [Github](https//github.com) obviously
+- [Gitlab](https//gitlab.com) can be self-host
+
+## Video meeting
+
+The Zoom alternatives
+
+- [Jitsi](https://meet.jit.si/)
+- [BigBlueButton](https://bigbluebutton.org/)
+- [Rocket Chat](https://rocket.chat/pricing/)
+
+
+## Agenda
+
+Don't want to let Google knows your agenda or the one of your employees ? 
+
+Find self hosted solutions here : [https://github.com/awesome-selfhosted/awesome-selfhosted#caldav-or-carddav-web-based-clients](https://github.com/awesome-selfhosted/awesome-selfhosted#caldav-or-carddav-web-based-clients)
