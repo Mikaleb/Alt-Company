@@ -1,67 +1,92 @@
-<p  align="center"><img  align="center"  style="width:320px"  src="./static/logo/logo_smaller.png"/></p>
+# Contributing
 
-<br/>
-  
-<p  align="center">
-<a  href="https://github.com/Mikaleb/Alt-Company/issues"><img  alt="GitHub issues"  src="https://img.shields.io/github/issues/Mikaleb/Alt-Company"></a>
-<a  href="https://github.com/Mikaleb/Alt-Company/network"><img  alt="GitHub forks"  src="https://img.shields.io/github/forks/Mikaleb/Alt-Company"></a>
-<a  href="https://github.com/Mikaleb/Alt-Company/stargazers"><img  alt="GitHub stars"  src="https://img.shields.io/github/stars/Mikaleb/Alt-Company"></a>
-<a  href="https://github.com/Mikaleb/Alt-Company"><img  alt="GitHub license"  src="https://img.shields.io/github/license/Mikaleb/Alt-Company"></a>
-</p>
+When contributing to this repository, please first discuss the change you wish to make via issue,
+email, or any other method with the owners of this repository before making a change. 
 
-> So you want to create a company? Do you need resources? You'd like for your company (or even your own) data to not be deleted by FAANG randomly?
+Please note we have a code of conduct, please follow it in all your interactions with the project.
 
-> If you are a free software/privacy enthusiast or if you just like to not have your google account wiped out for no reason, you're in the right place.
+## Pull Request Process
 
-## Alt-Company
+1. Ensure any install or build dependencies are removed before the end of the layer when doing a 
+   build.
+2. Update the README.md with details of changes to the interface, this includes new environment 
+   variables, exposed ports, useful file locations and container parameters.
+3. Increase the version numbers in any examples files and the README.md to the new version that this
+   Pull Request would represent. The versioning scheme we use is [SemVer](http://semver.org/).
+4. You may merge the Pull Request in once you have the sign-off of two other developers, or if you 
+   do not have permission to do that, you may request the second reviewer to merge it for you.
 
-The content goal is to actively show the alternatives of proprietary solutions that can get you out of their systems when they want. It's not exhaustive, and you might see that these solutions here as they are widely used and trustworthy in their industries.
+## Code of Conduct
 
-### Adding content
+### Our Pledge
 
-The route /admin/new is built for you to have a little visual editor that output a ready to use Markdown file,
+In the interest of fostering an open and welcoming environment, we as
+contributors and maintainers pledge to making participation in our project and
+our community a harassment-free experience for everyone, regardless of age, body
+size, disability, ethnicity, gender identity and expression, level of experience,
+nationality, personal appearance, race, religion, or sexual identity and
+orientation.
 
-you need to create it in your project folder under your language, let's say `/content/en/myNewPage.md` .
+### Our Standards
 
-> It's a temporary solution, when nuxt/content will be able to show us how to do that via their api.
+Examples of behavior that contributes to creating a positive environment
+include:
 
-### Editing content
+* Using welcoming and inclusive language
+* Being respectful of differing viewpoints and experiences
+* Gracefully accepting constructive criticism
+* Focusing on what is best for the community
+* Showing empathy towards other community members
 
-You can double click on an article to edit the markdown directly. We recommend you to use some web based solutions for now like [StackEdit](https://stackedit.io/) which is open-source too.
-_TODO : add an edit button_
+Examples of unacceptable behavior by participants include:
 
-## Design
+* The use of sexualized language or imagery and unwelcome sexual attention or
+advances
+* Trolling, insulting/derogatory comments, and personal or political attacks
+* Public or private harassment
+* Publishing others' private information, such as a physical or electronic
+  address, without explicit permission
+* Other conduct which could reasonably be considered inappropriate in a
+  professional setting
 
-If you want to setup a new design for yourself or [help with this repo design,](https://github.com/Mikaleb/Alt-Company/compare) feel free to do so !
+### Our Responsibilities
 
-## Build Setup
+Project maintainers are responsible for clarifying the standards of acceptable
+behavior and are expected to take appropriate and fair corrective action in
+response to any instances of unacceptable behavior.
 
-```bash
+Project maintainers have the right and responsibility to remove, edit, or
+reject comments, commits, code, wiki edits, issues, and other contributions
+that are not aligned to this Code of Conduct, or to ban temporarily or
+permanently any contributor for other behaviors that they deem inappropriate,
+threatening, offensive, or harmful.
 
-# install dependencies
+### Scope
 
-$ yarn install
+This Code of Conduct applies both within project spaces and in public spaces
+when an individual is representing the project or its community. Examples of
+representing a project or community include using an official project e-mail
+address, posting via an official social media account, or acting as an appointed
+representative at an online or offline event. Representation of a project may be
+further defined and clarified by project maintainers.
 
+### Enforcement
 
+Instances of abusive, harassing, or otherwise unacceptable behavior may be
+reported by contacting the project team at [INSERT EMAIL ADDRESS]. All
+complaints will be reviewed and investigated and will result in a response that
+is deemed necessary and appropriate to the circumstances. The project team is
+obligated to maintain confidentiality with regard to the reporter of an incident.
+Further details of specific enforcement policies may be posted separately.
 
-# serve with hot reload at localhost:3000
+Project maintainers who do not follow or enforce the Code of Conduct in good
+faith may face temporary or permanent repercussions as determined by other
+members of the project's leadership.
 
-$ yarn dev
+### Attribution
 
+This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 1.4,
+available at [http://contributor-covenant.org/version/1/4][version]
 
-
-# build for production and launch server
-
-$ yarn build
-
-$ yarn start
-
-
-
-# generate static project
-
-$ yarn generate
-
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+[homepage]: http://contributor-covenant.org
+[version]: http://contributor-covenant.org/version/1/4/
